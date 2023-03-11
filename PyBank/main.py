@@ -51,7 +51,7 @@ pybank_list = list(pybank_zip)
 
 #for statement for finding the max and min changes, then saving the data
 #along with the associated month to a variable for printing out later
-for i in range(len(pybank_list)-1):
+for i in range(len(pybank_list)):
      if pybank_list[i][2] == min(changes):  
         biggest_dec = f"{pybank_list[i][0]} ({pybank_list[i][2]})"
 
