@@ -2,6 +2,7 @@
 import os
 import csv
 #save the file locatiuon to be read in
+#I could not use a relative path because windows is dumb
 #YOU WILL NEED TO CHANGE THIS CODE IN ORDER TO RUN ON A DIFFERENT COMPUTER
 csvpath = r"C:\Users\EmGre\OneDrive\Desktop\python-challenge\python-challenge\PyBank\Resources\budget_data.csv"
 
