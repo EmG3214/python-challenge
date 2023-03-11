@@ -46,7 +46,7 @@ avg_change = round(avg_change, 2)
 
 changes_aligned = [0] + changes
 
-#zip lists to make new dataset and make it an iterateable list
+#zip lists to make new dataset and then list() to make it an iterateable list
 pybank_zip = zip(date_list, profit_loss_list, changes_aligned)
 pybank_list = list(pybank_zip)
 
