@@ -5,6 +5,7 @@ import csv
 #YOU WILL NEED TO CHANGE THIS CODE IN ORDER TO RUN ON A DIFFERENT COMPUTER
 csvpath = r"C:\Users\EmGre\OneDrive\Desktop\python-challenge\python-challenge\PyPoll\resources\election_data.csv"
 
+#set open lists for manipulating data
 ballot_ID = []
 county = []
 candidate = []
@@ -38,34 +39,35 @@ for i in candidate:
 #counting votes using the count function
 Diana_votes = candidate.count('Diana DeGette')
 
-
 Raymon_votes = candidate.count('Raymon Anthony Doane')
 
 
 #create a function for calculating the percentage of the votes
 def percentage(candidate_votes):
-    return (candidate_votes/number_of_votes)*100
+  x = (candidate_votes/number_of_votes)*100
+  return x
 
+#apply function to get percentages
 Charles_percent = percentage(Charles_votes)
 Diana_percent = percentage(Diana_votes)
 Raymon_percent = percentage(Raymon_votes)
 
 #Just for fun, an if statement for returning the winner
 if Charles_votes > Diana_votes and Charles_votes > Raymon_votes:
-    print('Winner: Charles Casper Stockham')
+    winner = 'Winner: Charles Casper Stockham'
 elif Diana_votes > Charles_votes and Diana_votes > Raymon_votes:
-    print('Winner: Diana DeGette')
+    winner ='Winner: Diana DeGette'
 elif Raymon_votes > Charles_votes and Raymon_votes > Diana_votes:
-    print('Winner: Raymon Anthony Doane')
+    winner ='Winner: Raymon Anthony Doane'
+
+#Print a pretty outpuit to the terminal
+print(f"Election Results\n-----------------------------\nTotal Votes: {number_of_votes} \n-----------------------------\nCharles Casper Stockham: {round(Charles_percent,3)}% ({Charles_votes}) \nDiana DeGette: {round(Diana_percent,3)}% ({Diana_votes}) \nRaymon Anthony Doane: {round(Raymon_percent,3)} ({Raymon_votes}) \n-------------------------\n{winner}\n-------------------------")
 
 
-print(f"Election Results\n-----------------------------\nTotal Votes: {number_of_votes} \n-----------------------------\nCharles Casper Stockham: {round(Charles_percent,3)}% ({Charles_votes}) \nDiana DeGette: {round(Diana_percent,3)}% ({Diana_votes}) \nRaymon Anthony Doane: {round(Raymon_percent,3)} ({Raymon_votes}) \n-------------------------\nWinner: Diana DeGette\n-------------------------")
-
-
-
+#Write the pretty output to a text file
 output_path = r"C:\Users\EmGre\OneDrive\Desktop\python-challenge\python-challenge\PyPoll\analysis\pypoll_analysis.txt"
 with open(output_path, "w") as txtfile:
-    txtfile.writelines(f"Election Results\n-----------------------------\nTotal Votes: {number_of_votes} \n-----------------------------\nCharles Casper Stockham: {round(Charles_percent,3)}% ({Charles_votes}) \nDiana DeGette: {round(Diana_percent,3)}% ({Diana_votes}) \nRaymon Anthony Doane: {round(Raymon_percent,3)} ({Raymon_votes}) \n-------------------------\nWinner: Diana DeGette\n-------------------------")
+    txtfile.writelines(f"Election Results\n-----------------------------\nTotal Votes: {number_of_votes} \n-----------------------------\nCharles Casper Stockham: {round(Charles_percent,3)}% ({Charles_votes}) \nDiana DeGette: {round(Diana_percent,3)}% ({Diana_votes}) \nRaymon Anthony Doane: {round(Raymon_percent,3)} ({Raymon_votes}) \n-------------------------\n{winner}\n-------------------------")
 
 
 
