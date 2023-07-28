@@ -4,7 +4,7 @@ import csv
 #save the file locatiuon to be read in
 #I could not use a relative path because windows is dumb
 #YOU WILL NEED TO CHANGE THIS CODE IN ORDER TO RUN ON A DIFFERENT COMPUTER
-csvpath = r"C:\Users\EmGre\OneDrive\Desktop\python-challenge\python-challenge\PyBank\Resources\budget_data.csv"
+csvpath = "PyBank/Resources/budget_data.csv"
 
 #Define empty lists for placing in dates and profit/losses
 date_list = []
@@ -66,7 +66,7 @@ for i in range(len(pybank_list)):
 print(f"Financial Analysis\n-----------------------------\nTotal Months {total_months} \nTotal: ${total_total} \nAverage Change: ${avg_change}  \nGreatest Increase in Profits: {biggest_inc} \nGreatest Decrease in Profits: {biggest_dec} ")
 
 #This code writes the pretty output to the text file
-output_path = r"C:\Users\EmGre\OneDrive\Desktop\python-challenge\python-challenge\PyBank\analysis\pybank_analysis.txt"
+output_path = r'C:\Users\EmGre\OneDrive\Desktop\Class Repositories\python-challenge\PyPoll\analysis\pypoll_analysis.txt'
 with open(output_path, "w") as txtfile:
     txtfile.writelines(f"Financial Analysis\n-----------------------------\nTotal Months {total_months} \nTotal: ${total_total} \nAverage Change: ${avg_change}  \nGreatest Increase in Profits: {biggest_inc} \nGreatest Decrease in Profits: {biggest_dec} ")
 

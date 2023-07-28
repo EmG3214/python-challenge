@@ -4,7 +4,7 @@ import csv
 #save the file locatiuon to be read in
 #I could not use a relative path because windows is dumb
 #YOU WILL NEED TO CHANGE THIS CODE IN ORDER TO RUN ON A DIFFERENT COMPUTER
-csvpath = r"C:\Users\EmGre\OneDrive\Desktop\python-challenge\python-challenge\PyPoll\resources\election_data.csv"
+csvpath = "PyPoll/resources/election_data.csv"
 
 #set open lists for manipulating data
 ballot_ID = []
@@ -66,7 +66,7 @@ print(f"Election Results\n-----------------------------\nTotal Votes: {number_of
 
 
 #Write the pretty output to a text file
-output_path = r"C:\Users\EmGre\OneDrive\Desktop\python-challenge\python-challenge\PyPoll\analysis\pypoll_analysis.txt"
+output_path = r'C:\Users\EmGre\OneDrive\Desktop\Class Repositories\python-challenge\PyPoll\analysis\pypoll_analysis.txt'
 with open(output_path, "w") as txtfile:
     txtfile.writelines(f"Election Results\n-----------------------------\nTotal Votes: {number_of_votes} \n-----------------------------\nCharles Casper Stockham: {round(Charles_percent,3)}% ({Charles_votes}) \nDiana DeGette: {round(Diana_percent,3)}% ({Diana_votes}) \nRaymon Anthony Doane: {round(Raymon_percent,3)} ({Raymon_votes}) \n-------------------------\n{winner}\n-------------------------")
 
